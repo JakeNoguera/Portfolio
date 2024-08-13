@@ -1,0 +1,501 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #00ABE4, #FFFFFF);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.site-header {
+    transition: margin-left .5s;
+    background-color: #65afff99;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    backdrop-filter: blur(10px);
+    border: 0px solid #ffffff80;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%; /* 2% of the width of its parent */
+}
+
+.site-header h4 {
+    position: relative;
+    left: 7%;
+    top: 15px;
+    color: #073438;
+    font-size: 25px;
+    font-family: 'Times New Roman'; 
+    font-weight: 200;
+    margin-top: 1px;
+    padding: 1em; /* 1em is equal to the current font size */
+    text-align: left;
+}
+
+.main-body{
+    transition: margin-left .5s;
+    text-align: center;
+    min-height: 252px;
+    padding: 5%;
+}
+
+.first-column, .second-column{
+    text-align: left;
+    min-height: 34px;
+    flex: 50%;
+}
+
+.button {
+    width: auto;
+    color: #10494d;
+    min-height: 34px;
+    border-color: #47b0b6;
+    border-radius: 5px;
+    background-color: #91C7FE;
+    padding: 0.5em 1em; /* 0.5em top and bottom padding, 1em left and right padding */
+    box-sizing: content-box;
+    box-shadow:0px 1px 3px #000000;
+}
+
+.button:hover {
+    background-color: #10494d; /* Change to a darker color on hover */
+    color: #91C7FE; /* Change text color on hover */
+}
+
+.weather-section, .trend-section, .severe-weather-section {
+    width: 1700px; 
+    height: max-content; 
+    margin-top:100px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #2d547ea9;
+    display: flex;
+    border-radius: 20px;    /*round corners*/
+    box-shadow:0px 5px 5px #000000;
+    overflow: auto; 
+}
+
+.section-header{
+    padding: 5px;
+    padding-left: 20px;
+    margin: 5px;
+    color: #b0baf5; /* White text */
+}
+
+/*--------------------first weather section--------------------------------------------------------*/
+.quick-weather{
+    margin: 1.5%;
+    background-color: #8b9dffa9;
+    border-radius: 201px 50px;    /*round corners*/
+    display: flex; 
+    padding: 20px;
+    padding-left: 5%;
+    margin-left: 20px;
+    margin: 30px;
+    box-shadow:0px 2px 2px #000000;
+    flex: 50%;
+    overflow: hidden; 
+
+}
+
+.quick-weather-icon{
+    width:  70px; 
+    height: 80px; 
+}
+
+.quick-weather-info{
+    padding-left: 2%;
+    text-align: left;
+    width: 50%; 
+    height: 50px;
+}
+
+.quick-weather-info-temp{
+    padding-right: 5%;
+    text-align: right;
+    width: 32%; margin-top: -15px;
+}
+
+.city-select {
+    width: 50%;
+    padding: 5px;
+    margin-top: -10%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #041718;
+    box-shadow: 0px 1px 3px #000000;
+    background-color: #082236c4; /* Black background */
+    color: #ffffff; /* White text */
+    font-family: 'Roboto', monospace; /* Example "cool" font */
+}
+
+.weather-comparison-bg{
+    padding: 10px;
+    margin: 20px;
+    background-color: #8b9dffa9;
+    border-radius: 10px;
+    /*display: flex;*/
+    box-shadow:0px 3px 3px #000000
+}
+
+.weather-compare{
+    padding: 5px;
+    margin: 10px;
+    background-color: #4553a1a9;
+    border-radius: 40px 10px;
+    box-shadow:0px 2px 2px #000000;
+}
+
+.first-row-weather-compare{
+    padding-left: 2%;
+    text-align: center;
+    height: 5%; 
+
+}
+
+.weather-compare-info-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-column-weather-compare{
+    padding-left: 2%;
+    text-align: left;
+    width: 50%; 
+    height: 5%; 
+    flex:50%;
+}
+
+.second-column-weather-compare{
+    padding-left: 2%;
+    text-align: left;
+    width: 50%; 
+    height: 5%; 
+    flex: 50;
+}
+
+/*--------------------second trend section--------------------------------------------------------*/
+
+.trend-chart-bg {
+    background-color: #2035a8a9;
+    border-radius: 10px;
+    /*display: flex;*/
+    box-shadow:0px 3px 3px #000000
+    /* go back here to expand chart*/
+}
+.trend-chart {
+    padding: 10px;
+    margin: 20px;
+    background-color: #8b9dffa9;
+    border-radius: 10px;
+    /*display: flex;*/
+    box-shadow:0px 3px 3px #000000
+    /* go back here to expand chart*/
+}
+.trend-info-widget-bg {
+    padding: 10px;
+    margin: 20px;
+    background-color: #8b9dffa9;
+    border-radius: 10px;
+    /*display: flex;*/
+    box-shadow:0px 3px 3px #000000
+    
+}
+.trend-info-widget {
+    padding: 10px;
+    margin: 20px;
+    padding-left: 20px;
+    background-color: #4553a1a9;
+    border-radius: 10px;
+    /*display: flex;*/
+    box-shadow:0px 3px 3px #000000;
+    border-radius: 20px 60px; 
+}
+
+.trend-chart-button {
+    width: 144px;
+    color: #10494d;
+    min-height: 34px;
+    border-color: #47b0b6;
+    border-radius: 5px;
+
+
+}
+
+
+/*--------------------third severe section--------------------------------------------------------*/
+
+.severe-map-bg {
+    padding: 10px;
+    margin: 20px;
+    background-color: #8b9dffa9;
+    border-radius: 10px;
+    /*display: flex;*/
+    box-shadow:0px 3px 3px #000000;
+    border-radius: 20px 60px; 
+    overflow: hidden;
+    height: 800px;
+    width: 850px;
+}
+
+.map-container {
+    padding: 15px;
+    border-radius: 25px 65px; 
+    overflow: hidden;
+    background-color: #8b9cff00; /* Adjust as needed */
+    height: 750px;
+    width: 800px;
+}
+
+#map {
+    height: 750px;
+    width: 700px;
+    padding: 50px;
+    overflow: hidden;
+    z-index: 80;
+}
+
+.warning-list-bg {
+    padding: 20px;
+    margin: 20px;
+    background-color: #8b9dffa9;
+    border-radius: 10px;
+    /*display: flex;*/
+    box-shadow:0px 3px 3px #000000;
+    border-radius: 50px 10px; 
+    padding-bottom: 30px;
+}
+
+
+
+/*--------------------the feet--------------------------------------------------------*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #65afff99; 
+    height: 50px; 
+    width: 1877px; 
+    position: fixed;
+    backdrop-filter: blur(10px); 
+    border: 0px solid #ffffff80; 
+    box-shadow: 0 10px 6px #0000001a; 
+    z-index: 100;
+}
+
+/* -------------------- Hamburger Menu -------------------------------------------------------------- */
+
+/* Style the hamburger menu */
+.hamburger-menu .bar {
+    display: block;
+    width: 25px; /* Width of the bars */
+    height: 3px; /* Height of the bars */
+    margin: 5px auto; /* Space between the bars */
+    background-color: #333; /* Color of the bars */
+    transition: all 0.3s ease;
+    z-index: 110;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: transparent; /* Makes the button background transparent */
+    border: none; /* Removes the border */
+    cursor: pointer;
+    padding: 10px; /* Padding around the icon */
+    align-items: center;
+    z-index: 110;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative; /* For absolute positioning of dropdown-content */
+    right: 1000px;
+    z-index:110;
+}
+
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 0; /* Sidebar width is zero by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    transition: 0.5s; /* Smooth transition effect */
+    padding-top: 60px; /* Space from the top */
+    z-index: 110;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    z-index: 110;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+    color: #818181;
+    z-index: 110;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* -------------------- Profile Menu -------------------------------------------------------------- */
+
+/* User Display */
+.username-display {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+
+/* Profile Dropdown Button Styles */
+.dropbtn-profile {
+    background-color: transparent; /* Makes the button background transparent */
+    border: none; /* Removes the border */
+    cursor: pointer;
+    padding: 10px; /* Padding around the icon */
+    align-items: center;
+}
+  
+/* Profile Dropdown Content Styles */
+.dropdown-content-profile {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Position directly below the profile icon/button */
+    right: 0; /* Align to the right side of the profile icon/button */
+    /* Adjust the right property if needed, so the dropdown appears to the left of the icon */
+}
+  
+/* Profile Icon Styles */
+.profile-icon {
+    width: 32px; /* or your preferred size */
+    height: 32px; /* or your preferred size */
+    top: 10px;
+}
+  
+/* Show the dropdown menu on hover */
+.profile-dropdown:hover .dropdown-content-profile {
+    display: block;
+}
+  
+/* Dropdown Link Styles */
+.dropdown-content-profile a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+/* Change color on hover */
+.dropdown-content-profile a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.profile-dropdown:hover .dropbtn-profile {
+    background-color: #3e8e41; /* This color will show on hover */
+}
+
+/* Additional Styles for positioning and alignment */
+.profile-dropdown {
+    position: relative; /* This ensures that the dropdown content aligns with the button */
+    right: 250px;
+}
+
+/* ---------------------------- media queries ------------------------------------ */
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+    body, html{
+        width: 100%;
+    }
+    
+    .site-header {
+        width: 100%; /* Adjust width for large screens */
+    }
+
+    .site-header h1 {
+        font-size: 50px; /* Can be larger on big screens */
+    }
+ 
+    .footer {
+        width: 100%; /* Adjust width for large screens */
+    }
+}
+
+/* Custom styles for phones in portrait and landscape modes */
+@media only screen and (max-width: 600px) {
+    /* Styles for devices with width up to 600px */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    /* Styles for devices with width between 601px and 768px */
+}
+
+/* Custom styles for tablets in portrait and landscape modes */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for devices with width between 769px and 1024px */
+}
+
+/* Custom styles for small laptops and large tablets (landscape) */
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    /* Styles for devices with width between 1025px and 1280px */
+}
+
+/* Custom styles for laptops and desktops */
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+    /* Styles for devices with width between 1281px and 1440px */
+}
+
+/* Custom styles for large screens */
+@media only screen and (min-width: 1441px) and (max-width: 1600px) {
+    /* Styles for devices with width between 1441px and 1600px */
+}
+
+/* Custom styles for extra large screens */
+@media only screen and (min-width: 1601px) {
+    /* Styles for devices with width greater than 1601px */
+}

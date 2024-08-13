@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+<div class="profile-container">
+    <div class="profile-info"> 
+    <h1>Profile Page</h1>
+    <p class="profile-info-box"><strong>Username:</strong> <?= htmlspecialchars($userInfo['username']); ?></p>
+    <p class="profile-info-box"><strong>Email:</strong> <?= htmlspecialchars($userInfo['email']); ?></p>
+    </div>
+    <h2>Change Password</h2>
+    <form action="../PHP/change_password.php" method="post">
+        <input class = "pw-input" type="password" name="current_password" placeholder="Current Password" required>
+        <input class = "pw-input" type="password" name="new_password" placeholder="New Password" required>
+        <input class = "pw-input" type="password" name="confirm_new_password" placeholder="Confirm New Password" required>
+        <button class = "change-password" type="submit">Change Password</button>
+    </form>
+</div>
+
+</body>
+</html>

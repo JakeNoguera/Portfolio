@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weather Forecast Project</title>
+    <link rel="stylesheet" href="../CSS/homepage.css">
+
+   <!-- Weather Warning Map Content -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet-search@2.9.7/dist/leaflet-search.min.css" />
+   <script src="https://unpkg.com/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+
+   <script defer src="https://cdn.aerisapi.com/sdk/js/latest/aerisweather.min.js"></script>
+
+
+    <!-- Sidebar content -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="homepage.html">Home</a>
+        <a href="../PHP/profile.php">Profile</a>
+        <a href="https://www.redcross.ca/how-we-help/emergencies-and-disasters-in-canada/types-of-emergencies" target="_blank">First Aid</a>
+        <a href="statistics.html">Statistics</a>
+        <a href="#">Setting</a>
+        <a href="about.html">About Us</a>
+        <a href="../PHP/logout.php">Logout</a>
+    </div>
+    <div class="site-header">
+        <h4> ☁ The Weather Forecast Project </h4>
+              <div class="dropdown">
+            <button class="dropbtn">
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </button>
+        </div>
+        <div class="profile-dropdown">
+            <button class="dropbtn-profile">
+                <img src="..\site images\icons\profile-user.png" alt="Profile" class="profile-icon">
+            </button>
+            <div class="username-display" alt="guest"></div>
+            <div class="dropdown-content-profile">
+                <a href="../PHP/profile.php">Profile</a>
+                <a href="../PHP/logout.php">Logout</a>
+            </div>
+        </div>
+    </div>
+</head>
+<body>
+
+    <section class="main-body">
+
+    <!-----------------first weather section------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <div class="weather-section">
+            <div class="first-column">
+                <div class ="section-header"> 
+                    <h1 style="color: #88dcf1e8; font-size: 2em;">Weather Section</h1>
+                    Last Updated: <span id="last-updated"></span>
+                    <a class="button" href="#" id="refresh-button">Refresh</a>
+                </div>
+
+                <div class="quick-weather"> 
+                    <img src="../site images/icons/flats-residential-apartment-icon.svg" alt="city icon" class="quick-weather-icon"> 
+                    <div class="quick-weather-info"> 
+                        <h3 class="city-name">city, province</h3>
+                        <p class="weather-details">weather details</p>
+                    </div>
+                    <div class="quick-weather-info-temp"> 
+                        <h1 class="temperature">temp</h1> 
+                        <select class="city-select">
+                             City Select
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="quick-weather"> 
+                    <img src="../site images/icons/flats-residential-apartment-icon.svg" alt="city icon" class="quick-weather-icon"> 
+                    <div class="quick-weather-info"> 
+                        <h3 class="city-name">city, province</h3>
+                        <p class="weather-details">weather details</p>
+                    </div>
+                    <div class="quick-weather-info-temp"> 
+                        <h1 class="temperature">temp</h1> 
+                        <select class="city-select">
+                             City Select
+                        </select>
+                    </div>
+                </div>
+
+                <div class="quick-weather"> 
+                    <img src="../site images/icons/flats-residential-apartment-icon.svg" alt="city icon" class="quick-weather-icon"> 
+                    <div class="quick-weather-info"> 
+                        <h3 class="city-name">city, province</h3>
+                        <p class="weather-details">weather details</p>
+                    </div>
+                    <div class="quick-weather-info-temp"> 
+                        <h1 class="temperature">temp</h1> 
+                        <select class="city-select">
+                             City Select
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="quick-weather"> 
+                    <img src="../site images/icons/flats-residential-apartment-icon.svg" alt="city icon" class="quick-weather-icon"> 
+                    <div class="quick-weather-info"> 
+                        <h3 class="city-name">city,province</h3>
+                        <p class="weather-details">weather details</p>
+                    </div>
+                    <div class="quick-weather-info-temp"> 
+                        <h1 class="temperature">temp</h1> 
+                        <select class="city-select">
+                             City Select
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="second-column">
+                <div class="weather-comparison-bg"> 
+                    <div class="weather-compare"> 
+                        <div class = first-row-weather-compare>
+                            
+                            <h1 class="weather-details">"weather details"</h1> 
+                            <h1 class="temperature">temperature</h1>
+                            <h3 class="city-name">city-name, province</h2>
+                                <select class="city-select"> 
+                                    City Select
+                                </select>
+                            
+                        </div>
+
+                        <div class="weather-compare-info-container">
+                            <div class="first-column-weather-compare">
+                                <p class="current-temperature">Current Temperature:</p>
+                                <p class="current-precipitation">Current Precipitation:</p>
+                                <p class="current-humidity">Current Humidity:</p>
+                            </div>
+            
+                            <div class="second-column-weather-compare">
+                                <p class="current-wind-speed">Current Wind Speed:</p>
+                                <p class="current-snow-fall">Current Snow Depth:</p>
+                                <p class="current-visibility">Current Visibility:</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p> <center>Brief Weather Comparison</center></p>
+
+                    <div class="weather-compare"> 
+                        <div class = first-row-weather-compare>
+                            <p>
+                            <h1 class="weather-details">"weather details"</h1> 
+                            <h1 class="temperature">temperature</h1>
+             
+                            <h3 class="city-name">city-name, province</h2>
+                                <select class="city-select"> 
+                                    City Select
+                                </select>
+                            </p>
+                        </div>
+
+                        <div class="weather-compare-info-container">
+                            <div class="first-column-weather-compare">
+                                <p class="current-temperature">Current Temperature:</p>
+                                <p class="current-precipitation">Current Precipitation:</p>
+                                <p class="current-humidity">Current Humidity:</p>
+                            </div>
+            
+                            <div class="second-column-weather-compare">
+                                <p class="current-wind-speed">Current Wind Speed:</p>
+                                <p class="current-snow-fall">Current Snow Depth:</p>
+                                <p class="current-visibility">Current Visibility:</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+    <!-----------------second trend section------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <div class="trend-section">
+            <div class="first-column">
+                <div class ="section-header"> 
+                    <h1 style="color: #88dcf1e8; font-size: 2em;">Trend Section</h1>
+                    <p>Last Updated: 01:15:15 PM 02/29/24</p>
+                    <a class="trend-chart-button" href="#">Hourly</a> | <a class="trend-chart-button" href="#">Daily</a> | <a class="trend-chart-button" href="#">Weekly</a>
+                    | <a class="trend-chart-button" href="#">10 Days</a> | <a class="trend-chart-button" href="#">20 Days</a>                    
+                </div>
+                <div trend-chart-bg>
+                    <div class = "trend-chart"> 
+                        <p>
+                            <center>"insert graph here"</center>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="second-column">
+                <div class="trend-info-widget-bg">
+                    <div class ="section-header"> 
+                    <h2 style="color: #1b2a2ee8; font-size: 2em;">"City Name"</h2>
+                    <a class="button" href="#">Change city</a>
+                    </div>
+                    <div class="trend-info-widget">
+                        <p>
+                            Average Temperature: "insert data here" <br><br>
+                            Average Precipitation:  <br><br>
+                            Average Humidity:   <br><br>
+                            Average Wind Speed: <br><br>
+                            Average Snow Depth: <br><br>
+                            Average Visibility: <br><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-----------------third severe section------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <div class="severe-weather-section">
+            <div class="first-column">
+                <div class = section-header>
+                <h1 style="color: #88dcf1e8; font-size: 2em;">Severe Weather Section</h1>
+                </div>
+                <div class="severe-map-bg">
+
+
+                    <div class="map-container">
+                        <div id="map"></div>
+                        <div class="map-controls" style="margin-top:5px;">
+                            <a id="map-toggle-anim" href="#">Play</a>
+                        </div>
+                    </div>
+                </div>
+                <p></p><br>    
+                <a class="button" href="#">Health Safety During Weather Emergencies</a>
+            </div>
+
+            <div class="second-column">
+                <div class="warning-list-bg">
+                    <div class="section-header">
+                        <h1 style="color: #325a64e8; font-size: 2em;"> Severe Weather Warnings Near You</h1>
+                        <div id="statusMessage">""</div>
+                    </div>
+                    <img src="https://legends.aerisapi.com/advisories-r7-col5-p15,5.svg?ls=12&lc=222222"></img>
+                </div>
+            </div>
+    </section>
+
+    <!----------------footer and more------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="footer">
+    </div>
+     
+    <script src="../JS/script.js"></script>
+    <script src="https://cdn.aerisapi.com/sdk/js/latest/aerisweather.min.js"></script>
+    <script>
+        // Fetch the username and update the username display
+        function fetchUsername() {
+            fetch('get_username.php')
+            .then(response => response.json())
+            .then(data => {
+                // Set the username to the data received or "Guest" if no username is found
+                const username = data.username || 'Guest';
+                document.querySelector('.username-display').textContent = username;
+            })
+            .catch(error => {
+                console.error('Error fetching username:', error);
+                // Set the username display to "Guest" in case of any errors
+                document.querySelector('.username-display').textContent = 'Guest';
+            });
+        }
+    
+        fetchUsername(); // Call the function to update the username
+    </script>
+</body>
+</html>

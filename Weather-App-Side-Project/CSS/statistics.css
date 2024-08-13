@@ -1,0 +1,30 @@
+/* Statistics container */
+.statistics-container {
+    /* Use the same styles as your .weather-section, .trend-section, or .severe-weather-section class */
+    height: max-content; 
+    margin-bottom: 40px;
+    background-color: #2d547ea9;
+    display: flex;
+    border-radius: 20px;    /*round corners*/
+    box-shadow:0px 5px 5px #000000;
+    overflow: auto; 
+    position: relative; /* Add this line */
+    left: 50%; /* Center the container horizontally */
+    transform: translateX(-50%); /* Center the container relative to its own width */
+    width: 140%; /* Adjust as needed */
+}
+
+/* Statistics item */
+.statistics-item {
+    /* Use the same styles as your .quick-weather, .trend-chart, or .severe-map-bg class */
+    background-color: #8b9dffa9;
+    border-radius: 201px 50px;    /*round corners*/
+    display: flex; 
+    padding: 20px;
+    padding-left: 5%;
+    margin-left: 20px;
+    margin: 30px;
+    box-shadow:0px 2px 2px #000000;
+    flex: 50%;
+    overflow: auto; 
+}

@@ -1,0 +1,110 @@
+/* Import a font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* Use the imported font throughout the page */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* about container */
+.about-container {
+    height: max-content; 
+    margin: 40px;
+    background-color: #4553a1a9; 
+    color: #c6dfe7; /* Dark gray text */
+    display: block;
+    border-radius: 20px;    /*round corners*/
+    box-shadow:0px 5px 5px #000000;
+    overflow: auto; 
+    position: relative; 
+    left: 50%; /* Center the container horizontally */
+    transform: translateX(-50%); /* Center the container relative to its own width */
+    width: 100%; /* The container will take up the full width of its parent element */
+    max-width: 1200px; /* The maximum width of the container will be 1200px */
+    animation: fadeIn 1s ease-in-out; /* Add a fade-in animation */
+    padding: 40px; /* Add padding */
+}
+
+/* About item */
+.about-item {
+    padding: 20px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* About item headings */
+.about-item h3 {
+    font-size: 1.6em;
+    color: #c6dfe7; /* Blue headings */
+    margin-bottom: 10px;
+}
+
+/* Team member */
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%; /* Circular images */
+}
+
+/* Contact form */
+form {
+    margin-top: 20px;
+    width: 50%; /* Set a width */
+    margin: 0 auto; /* Center the form */
+    background-color: #8b9dffa9; /* White background */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+form label {
+    display: block;
+    margin-bottom: 1px;
+    font-size: 1.2em; /* Increase the font size */
+}
+
+form input, form textarea {
+    display: block;
+    width: 50%; 
+    padding: 2px; 
+    margin: 0 auto; /* Center the inputs and textareas */
+    font-size: 0.8em;
+    border-radius: 5px;
+    border: 1px solid #ccc; 
+}
+
+
+form input[type="submit"] {
+    background-color: #21253da9; /* Blue background */
+    color: #eaeaecf5; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+}
+
+/* FAQs */
+details {
+    margin-top: 20px;
+}
+
+details summary {
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

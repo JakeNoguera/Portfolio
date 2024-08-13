@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Neuropol';
+    src: url('NEUROPOL.ttf') format('truetype');
+}
+
+/* Reset margin, set dimensions to fill the entire viewport, apply flexbox for center alignment, set default font, and prevent scrolling */
+body, html {
+    margin: 0;                      /* Removes default margin provided by the browser */
+    width: 100%;                    /* Sets width to fill the full width of the viewport */
+    height: 100%;                   /* Sets height to fill the full height of the viewport */
+    display: flex;                  /* Enables flexbox layout */
+    justify-content: center;        /* Centers content horizontally in the flex container */
+    align-items: center;            /* Centers content vertically in the flex container */
+    font-family: 'Neuropol', sans-serif; /* Sets the default font family */
+    overflow: hidden;               /* Hides any content that overflows the body and html elements */
+}
+
+/* Style rules for the #starry-sky ID, used for the main container of the stars */
+#starry-sky {
+    position: relative;             /* Establishes a positioning context for absolutely positioned stars */
+    width: 100%;                   /* Width is 100% of the viewport width */
+    height: 100%;                  /* Height is 100% of the viewport height */
+    background: linear-gradient(180deg, #000000, #200033); /* Background with a linear gradient from dark blue to dark purple */
+}
+
+/* Style rules for elements with the 'star' class, representing individual stars */
+#star {
+    position: absolute;            /* Positioned absolutely relative to its nearest positioned ancestor (#starry-sky) */
+    border-radius: 50%;            /* Makes the div circular */
+    background-image: radial-gradient(circle, white 50%, rgba(255, 255, 255, 0) 70%); /* Creates a radial gradient background from white to transparent */
+    opacity: 0.8;                  /* Sets the opacity to 80% to make stars less intense */
+}
+
+#background-building {
+    height: 10%;
+    width: 100%;
+    position: relative;
+    top: 55%;
+    z-index: 1;
+}
+.header {
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    top: 5%;
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffffff80;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%; /* 2% of the width of its parent */
+}
+
+.header a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    z-index: 110;
+}
+
+.header a:hover {
+    color: #f1f1f1;
+}
+
+#about-me {
+    height: 10%;
+    width: 100%;
+    position: relative;
+    left: 5%
+}
+
+#skills {
+    height: 10%;
+    width: 100%;
+    position: relative;
+    left: 5%
+}
+
+#projects {
+    height: 10%;
+    width: 100%;
+    position: relative;
+    left: 5%
+}
+
+#contact-me {
+    height: 10%;
+    width: 100%;
+    position: relative;
+    left: 5%
+}
